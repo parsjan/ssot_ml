@@ -1,0 +1,158 @@
+aiserver@ailabsrv:~$ /usr/bin/nvidia-smi --query-gpu=index,name,uuid,serial --format=csv
+index, name, uuid, serial
+0, NVIDIA A100-SXM4-80GB, GPU-54c11fde-0724-c5ff-4e47-1e9536d13c82, 1651324005925
+1, NVIDIA A100-SXM4-80GB, GPU-602eedc7-acd1-e3a1-2caa-dff5ea17f13f, 1651324005911
+2, NVIDIA A100-SXM4-80GB, GPU-9fe9c12d-25ff-c575-a19e-a5c7503ea8a5, 1651324007165
+3, NVIDIA A100-SXM4-80GB, GPU-88f8abe3-7e3d-6a04-1a33-fedd31cbae58, 1651324007522
+4, NVIDIA A100-SXM4-80GB, GPU-d12e9ec6-7e70-d0a6-9612-586a0e767f4f, 1651324006827
+5, NVIDIA A100-SXM4-80GB, GPU-da1a6617-ecbf-b0e0-dc77-380e5c30f12a, 1651324006050
+6, NVIDIA A100-SXM4-80GB, GPU-a745dfc2-d9b6-e396-13d1-6b30d1b6f8b4, 1651324005906
+7, NVIDIA A100-SXM4-80GB, GPU-8cc69c05-a979-040d-9bbd-39a00bf608bd, 1651324006086
+aiserver@ailabsrv:~$ nvidia-smi
+Mon Jun  2 06:49:07 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.51.03              Driver Version: 575.51.03      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:07:00.0 Off |                   On |
+| N/A   33C    P0             48W /  400W |     249MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:0B:00.0 Off |                   On |
+| N/A   33C    P0             50W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB          Off |   00000000:49:00.0 Off |                   On |
+| N/A   31C    P0             48W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB          Off |   00000000:4D:00.0 Off |                   On |
+| N/A   33C    P0             49W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA A100-SXM4-80GB          Off |   00000000:88:00.0 Off |                   On |
+| N/A   31C    P0             45W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA A100-SXM4-80GB          Off |   00000000:8B:00.0 Off |                   On |
+| N/A   33C    P0             49W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA A100-SXM4-80GB          Off |   00000000:C8:00.0 Off |                   On |
+| N/A   33C    P0             47W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA A100-SXM4-80GB          Off |   00000000:CB:00.0 Off |                   On |
+| N/A   32C    P0             48W /  400W |       0MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    7   0   0  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0    8   0   1  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0    9   0   2  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0   10   0   3  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0   11   0   4  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0   12   0   5  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+|  0   13   0   6  |              36MiB /  9728MiB    | 14      0 |  1   0    0    0    0 |
+|                  |                 0MiB / 16383MiB  |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+aiserver@ailabsrv:~$ nvidia-bug-report.sh
+ERROR: Please run nvidia-bug-report.sh as root.
+aiserver@ailabsrv:~$ sudo nvidia-bug-report.sh
+
+nvidia-bug-report.sh will now collect information about your
+system and create the file 'nvidia-bug-report.log.gz' in the current
+directory.  It may take several seconds to run.  In some
+cases, it may hang trying to capture data generated dynamically
+by the Linux kernel and/or the NVIDIA kernel module.  While
+the bug report log file will be incomplete if this happens, it
+may still contain enough data to diagnose your problem.
+
+If nvidia-bug-report.sh hangs, consider running with the --safe-mode
+and --extra-system-data command line arguments.
+
+Please include the 'nvidia-bug-report.log.gz' log file when reporting
+your bug via the NVIDIA Linux forum (see forums.developer.nvidia.com)
+or by sending email to 'linux-bugs@nvidia.com'.
+
+By delivering 'nvidia-bug-report.log.gz' to NVIDIA, you acknowledge
+and agree that personal information may inadvertently be included in
+the output.  Notwithstanding the foregoing, NVIDIA will use the
+output only for the purpose of investigating your reported issue.
+
+Running nvidia-bug-report.sh...python3: can't open file '/usr/lib64/mft/python_tools/gearbox/gearbox_status_script.py': [Errno 2] No such file or directory
+
+
+^C
+aiserver@ailabsrv:~$ nvidia-smi -a > nvidia-smi-a.txt
+aiserver@ailabsrv:~$ nvidia-smi nvlink -s > nvidia-smi-nvlink-s.txt
+aiserver@ailabsrv:~$ nvidia-smi topo -m > nvidia-smi-topo-m.txt
+aiserver@ailabsrv:~$ /usr/bin/nvidia-bug-report.sh
+ERROR: Please run nvidia-bug-report.sh as root.
+aiserver@ailabsrv:~$ sudo /usr/bin/nvidia-bug-report.sh
+
+nvidia-bug-report.sh will now collect information about your
+system and create the file 'nvidia-bug-report.log.gz' in the current
+directory.  It may take several seconds to run.  In some
+cases, it may hang trying to capture data generated dynamically
+by the Linux kernel and/or the NVIDIA kernel module.  While
+the bug report log file will be incomplete if this happens, it
+may still contain enough data to diagnose your problem.
+
+If nvidia-bug-report.sh hangs, consider running with the --safe-mode
+and --extra-system-data command line arguments.
+
+Please include the 'nvidia-bug-report.log.gz' log file when reporting
+your bug via the NVIDIA Linux forum (see forums.developer.nvidia.com)
+or by sending email to 'linux-bugs@nvidia.com'.
+
+By delivering 'nvidia-bug-report.log.gz' to NVIDIA, you acknowledge
+and agree that personal information may inadvertently be included in
+the output.  Notwithstanding the foregoing, NVIDIA will use the
+output only for the purpose of investigating your reported issue.
+
+Running nvidia-bug-report.sh...python3: can't open file '/usr/lib64/mft/python_tools/gearbox/gearbox_status_script.py': [Errno 2] No such file or directory
+^C
+aiserver@ailabsrv:~$ /usr/bin/nvidia-smi --query-gpu=index,name,uuid,serial --format=csv
+index, name, uuid, serial
+0, NVIDIA A100-SXM4-80GB, GPU-54c11fde-0724-c5ff-4e47-1e9536d13c82, 1651324005925
+1, NVIDIA A100-SXM4-80GB, GPU-602eedc7-acd1-e3a1-2caa-dff5ea17f13f, 1651324005911
+2, NVIDIA A100-SXM4-80GB, GPU-9fe9c12d-25ff-c575-a19e-a5c7503ea8a5, 1651324007165
+3, NVIDIA A100-SXM4-80GB, GPU-88f8abe3-7e3d-6a04-1a33-fedd31cbae58, 1651324007522
+4, NVIDIA A100-SXM4-80GB, GPU-d12e9ec6-7e70-d0a6-9612-586a0e767f4f, 1651324006827
+5, NVIDIA A100-SXM4-80GB, GPU-da1a6617-ecbf-b0e0-dc77-380e5c30f12a, 1651324006050
+6, NVIDIA A100-SXM4-80GB, GPU-a745dfc2-d9b6-e396-13d1-6b30d1b6f8b4, 1651324005906
+7, NVIDIA A100-SXM4-80GB, GPU-8cc69c05-a979-040d-9bbd-39a00bf608bd, 1651324006086
+aiserver@ailabsrv:~$ 
+
+

@@ -1,0 +1,146 @@
+aiserver@ailabsrv:~$ nvidia-smi -q | grep -A 2 Fabric
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+aiserver@ailabsrv:~$ sudo systemctl start nvidia-fabricmanager
+Failed to start nvidia-fabricmanager.service: Unit nvidia-fabricmanager.service not found.
+aiserver@ailabsrv:~$ nvidia-smi -q | grep -A 2 Fabric
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+--
+        GPU Fabric GUID                   : N/A
+    Inforom Version
+        Image Version                     : G506.0210.00.03
+--
+    Fabric
+        State                             : N/A
+        Status                            : N/A
+aiserver@ailabsrv:~$ sudo nvidia-smi -r
+The following GPUs could not be reset:
+  GPU 00000000:07:00.0: In use by another client
+  GPU 00000000:0B:00.0: In use by another client
+  GPU 00000000:49:00.0: In use by another client
+  GPU 00000000:4D:00.0: In use by another client
+  GPU 00000000:88:00.0: In use by another client
+  GPU 00000000:8B:00.0: In use by another client
+  GPU 00000000:C8:00.0: In use by another client
+  GPU 00000000:CB:00.0: In use by another client
+
+8 devices are currently being used by one or more other processes (e.g., Fabric Manager, CUDA application, graphics application such as an X server, or a monitoring application such as another instance of nvidia-smi). Please first kill all processes using these devices and all compute applications running in the system.
+aiserver@ailabsrv:~$ sudo reboot
+Connection to 192.168.1.15 closed by remote host.
+Connection to 192.168.1.15 closed.
+
