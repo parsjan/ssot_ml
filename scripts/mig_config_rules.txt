@@ -1,0 +1,33 @@
+there are syntax rules for the MIG configuration lines in your .txt file. Each line should represent a valid MIG profile name, following the format supported by your A100 80GB GPU.
+
+
+ Syntax Rule Format:
+ <GiCount>g.<Memory>gb
+
+GiCount = Number of GPU instances (1–7 depending on GPU model)
+Memory = Amount of memory per instance (in GB)
+
+The whole profile must be supported by the GPU (you can’t just write arbitrary combinations)
+
+Valid MIG profiles for A100 80GB:
+Here are the standard profile strings you can use in your text file:
+
+| Profile String | GPU Slices | Memory |
+| -------------- | ---------- | ------ |
+| `1g.10gb`      | 1/7        | 10 GB  |
+| `2g.20gb`      | 2/7        | 20 GB  |
+| `3g.40gb`      | 3/7        | 40 GB  |
+| `7g.80gb`      | Full GPU   | 80 GB  |
+
+Note: You can't exceed the total resources of the GPU. For example, you can’t define 9 instances of 1g.10gb on a single A100.
+
+Example mig_config.txt (Valid):
+1g.10gb
+1g.10gb
+2g.20gb
+3g.40gb
+
+This will consume the entire 80 GB and all slices of the GPU (10 + 10 + 20 + 40 = 80 GB).
+
+
+
